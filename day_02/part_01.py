@@ -19,7 +19,6 @@ def incode(noun: int, verb: int, in_list: list) -> int:
 with open('input.txt', 'r') as file:
     input_string = file.read()
 
-pattern = re.compile(r'\d+')
-inlist = list(map(int, re.findall(pattern, input_string)))
+inlist = list(map(int, re.findall(r'\d+', input_string)))
 
 print(incode(12, 2, inlist))
